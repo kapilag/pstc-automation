@@ -16,7 +16,7 @@ public class SimpleGoogleTest {
 		System.out.println(browserConf.getCapabilities().getPlatform());
 		PageObjectFactory pof = new PageObjectFactory(browserConf, prop);
 		
-		pof.googlePage().loadFromProperty().isLoaded().search("Selenium").clickOnLink(0);
+		pof.googlePage().loadFromProperty().isLoaded().search("Selenium").clickOnLink(1);
 		// Selenium
 	
 		sassert.assertEquals(pof.seleniumPage().isLoaded().getTitle(),
