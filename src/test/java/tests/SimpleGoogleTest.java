@@ -2,15 +2,9 @@ package tests;
 
 import omelet.data.IProperty;
 import omelet.data.driverconf.IBrowserConf;
-import omelet.driver.Driver;
 import omelet.testng.support.SAssert;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-
-import pageobjects.GooglePage;
 import pageobjects.PageObjectFactory;
-import pageobjects.SeleniumPage;
 
 public class SimpleGoogleTest {
 	
