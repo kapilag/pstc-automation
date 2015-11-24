@@ -6,8 +6,6 @@
  		browsername="firefox"
  		remoteflag = "false"
  		host="ondemand.saucelabs.com"
- 		port="80"     
- 		username = "kapilaggarwal1"
- 		key = "4c8771f9-a178-4da5-8ef4-163956e56eae"
+ 		port="80"
 		/>    
 </ClientEnvironments>
