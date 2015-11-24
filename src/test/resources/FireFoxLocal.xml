@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClientEnvironments>
+        <ClientEnvironment
+        	browsername="firefox"
+        	dc.platform = ""
+        	dc.version=""
+    		remoteflag = "false"/>
+    		  <ClientEnvironment
+        	browsername="firefox"
+        	dc.platform = ""
+    		remoteflag = "false"/>
+</ClientEnvironments>
