@@ -4,12 +4,13 @@
 
 	<listeners>
 		<listener class-name="omelet.testng.support.TestInterceptor"></listener>
+		<listener class-name="omelet.support.saucelabs.SauceLabsIntegration"></listener>
 		<listener class-name="omelet.driver.DriverInitialization"></listener>
 		<listener
 			class-name="omelet.testng.support.RetryIAnnotationTransformer"></listener>
 		<listener class-name="omelet.driver.SuiteConfiguration"></listener>
 		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
-		<listener class-name="omelet.support.saucelabs.SauceLabsIntegration"></listener>
+		
 	</listeners>
 	<test name="GoogleTestBasic" preserve-order="true" parallel="methods"
 		thread-count="2">
