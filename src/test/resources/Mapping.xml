@@ -21,6 +21,7 @@
 		<Class name="tests.SimpleGoogleTest" clientEnvironment="FireFoxSauce.xml">
 			<MethodName name = "tests.SimpleGoogleTest.verifySeleniumTitle_XML" clientEnvironment="FireFoxSauce.xml" testData="TestData.xml"></MethodName>
 		</Class>
+		<Class name="tests.AmazonWishListTest" clientEnvironment="FireFoxSauce.xml" testData="AmazonTestData.xml"/>
 		<!-- <Class name="com.sampleTest.test.datatest.GoogleTest" clientEnvironment="browsers/FireFoxLocal.xml;browsers/ChromeLocal.xml"></Class> -->
 	</Package>
 </Mapping>

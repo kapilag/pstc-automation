@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
-<suite name="Google Example Suite" verbose="2" parallel="tests"
+<suite name="Google And AmazonSuite" verbose="2" parallel="tests"
 	thread-count="2" data-provider-thread-count="2">
 
 	<listeners>
@@ -16,6 +16,13 @@
 		thread-count="2">
 		<classes>
 			<class name="tests.SimpleGoogleTest"></class>
+		</classes>
+	</test>
+	
+	<test name="AmazonWishListTest" preserve-order="true" parallel="methods"
+		thread-count="2">
+		<classes>
+			<class name="tests.AmazonWishListTest"></class>
 		</classes>
 	</test>
 </suite> 
