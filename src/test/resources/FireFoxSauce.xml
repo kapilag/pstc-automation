@@ -7,6 +7,15 @@
  		remoteflag = "false"
  		host="ondemand.saucelabs.com"
  		port="80"
+		/>   
+		
+		<ClientEnvironment
+ 		dc.platform = "Win 7"
+ 		browsername="Chrome"
+ 		dc.version="46"
+ 		remoteflag = "false"
+ 		host="ondemand.saucelabs.com"
+ 		port="80"
 		/>    
 		
 		<!-- 	 <ClientEnvironment
