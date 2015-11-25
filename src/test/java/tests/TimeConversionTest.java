@@ -30,6 +30,8 @@ public class TimeConversionTest {
 		String time=pof.searchPage().isLoaded().getConvertedTime();
 	
 		pof.searchPage().fileWrite(time);
+		
+		pof.searchPage().verifyTime("output.txt");
 		sassert.assertAll();
 	}
 	
