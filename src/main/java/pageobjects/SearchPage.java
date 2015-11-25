@@ -51,8 +51,12 @@ public class SearchPage {
 		FileReader fileReader = new FileReader(fileName);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		String line = null;
+		String lines = null;
 		while ((line = bufferedReader.readLine()) != null) {
-			sassert.assertEquals(line.contains(prop.getValue(DataEnum.Google_Timezone)), true);
+			lines=lines+line;
+		
 		}
+		sassert.assertEquals(lines.contains(prop.getValue(DataEnum.Google_Timezone)), true);
+		sassert.assertAll();
 	}
 }

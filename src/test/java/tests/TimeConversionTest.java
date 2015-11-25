@@ -32,7 +32,7 @@ public class TimeConversionTest {
 		pof.searchPage().fileWrite(time);
 		
 		pof.searchPage().verifyTime("output.txt");
-		sassert.assertAll();
+		
 	}
 	
 
