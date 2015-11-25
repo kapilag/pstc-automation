@@ -15,7 +15,7 @@
 	<test name="GoogleTestBasic" preserve-order="true" parallel="methods"
 		thread-count="2">
 		<classes>
-			<class name="tests.SimpleGoogleTest"></class>
+			<class name="tests.TimeConversionTest"></class>
 		</classes>
 	</test>
 </suite> 

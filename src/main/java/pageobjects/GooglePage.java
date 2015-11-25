@@ -1,5 +1,7 @@
 package pageobjects;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 import omelet.common.ExpectedConditionExtended;
@@ -15,54 +17,60 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class GooglePage {
-	
+
 	private WebDriver driver;
 	private IProperty prop;
-	
+
 	@FindBy(name = "q")
 	private WebElement searchBar;
 	@FindBys(@FindBy(css = ".rc .r a"))
 	private List<WebElement> searchReturnLinks;
-	
-	//Simple Test Contructor
-	/*public GooglePage(WebDriver driver){
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}*/
-	//Constructor using Property use
-	public GooglePage(WebDriver driver,IProperty prop){
+	@FindBy(name = "btnG")
+	private WebElement searchButton;
+
+	// Simple Test Contructor
+	/*
+	 * public GooglePage(WebDriver driver){ this.driver = driver;
+	 * PageFactory.initElements(driver, this); }
+	 */
+	// Constructor using Property use
+	public GooglePage(WebDriver driver, IProperty prop) {
 		this.driver = driver;
 		this.prop = prop;
 		PageFactory.initElements(driver, this);
 	}
+
+	public void searchTime() {
+		String timezone = prop.getValue(DataEnum.Google_TimezoneToConvert);
+		searchBar.sendKeys(timezone + " to " + prop.getValue(DataEnum.Google_Timezone));
+		searchButton.click();
+	}
+
 	
-	
-	
-	public GooglePage load(String url){
+	public GooglePage load(String url) {
 		driver.get(prop.getValue(DataEnum.Google_url));
 		return this;
 	}
-	
-	public GooglePage loadFromProperty(){
+
+	public GooglePage loadFromProperty() {
 		driver.get(prop.getValue("Google_url"));
 		return this;
 	}
-	
-	public GooglePage isLoaded(){
-		if(null == DriverUtility.waitFor(ExpectedConditionExtended.elementToBeClickable(searchBar), driver, 5)){
+
+	public GooglePage isLoaded() {
+		if (null == DriverUtility.waitFor(ExpectedConditionExtended.elementToBeClickable(searchBar), driver, 5)) {
 			throw new FrameworkException("Not able to load Google Home page in 5 seconds");
 		}
 		return this;
 	}
-	
-	public GooglePage search(String searchText){
-		searchBar.sendKeys(searchText+Keys.RETURN);
+
+	public GooglePage search(String searchText) {
+		searchBar.sendKeys(searchText + Keys.RETURN);
 		return this;
 	}
-	
-	public void clickOnLink(int indexOfTheLink){
+
+	public void clickOnLink(int indexOfTheLink) {
 		searchReturnLinks.get(indexOfTheLink).click();
 	}
-
 
 }

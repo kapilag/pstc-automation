@@ -9,26 +9,33 @@
 ]>
 
 <Conf>
-	<Data environment="staging">
-		<Pages>
-			<Page name="Google">
-				<url>https://www.google.com/</url>
-				<PageTimeOut>10</PageTimeOut>
-			</Page>
-			<Page name="Selenium">
-				<Title>Selenium - Web Browser Automation</Title>
-			</Page>
-		</Pages>
-	</Data>
 
 	<Data environment="live">
 		<Pages>
-			<Page name="Google">
-				<url>https://www.google.com/</url>
-				<PageTimeOut>10</PageTimeOut>
+		<Page name="Google">
+		<url>https://www.google.co.in/</url>
+				<Timezone>US NEW YORK TIME</Timezone>
+				<TimezoneToConvert>IST</TimezoneToConvert>
 			</Page>
-			<Page name="Selenium">
-				<Title>Selenium - Web Browser Automation</Title>
+		</Pages>
+	</Data>
+	<Data environment="live">
+		<Pages>
+		<Page name="Google">
+		<url>https://www.google.co.in/</url>
+				
+				<Timezone>SINGAPORE TIME</Timezone>
+				<TimezoneToConvert>IST</TimezoneToConvert>
+			</Page>
+		</Pages>
+	</Data>
+	<Data environment="live">
+		<Pages>
+		<Page name="Google">
+		<url>https://www.google.co.in/</url>
+				
+				<Timezone>Australia Sydney Time</Timezone>
+				<TimezoneToConvert>IST</TimezoneToConvert>
 			</Page>
 		</Pages>
 	</Data>

@@ -13,7 +13,7 @@ public class PageObjectFactory {
 	private WebDriver driver;
 	private IProperty prop;
 	
-	private SeleniumPage seleniumPage;
+	private SearchPage searchPage;
 	private GooglePage googlePage;
 	
 	
@@ -24,14 +24,14 @@ public class PageObjectFactory {
 		
 	}
 	
-	public SeleniumPage seleniumPage(){
-		
-		if(null==seleniumPage)
-			seleniumPage = new SeleniumPage(driver,prop);
-		
-		return seleniumPage;
-	}
 	
+public SearchPage searchPage(){
+		
+		if(null==searchPage)
+			searchPage = new SearchPage(driver,prop);
+		
+		return searchPage;
+	}
 	public GooglePage googlePage(){
 		
 		if(null==googlePage)
