@@ -13,15 +13,9 @@ public class SimpleGoogleTest {
 	@Test(description = "verify if Selenium title is as expected", enabled = true,dataProvider="XmlData")
 	public void verifySeleniumTitle_XML(IBrowserConf browserConf, IProperty prop) {
 		
-		System.out.println(browserConf.getCapabilities().getPlatform());
 		PageObjectFactory pof = new PageObjectFactory(browserConf, prop);
+		pof.googlePage().loadFromProperty().isLoaded().login();
 		
-		pof.googlePage().loadFromProperty().isLoaded().search("Selenium").clickOnLink(1);
-		// Selenium
-	
-		sassert.assertEquals(pof.seleniumPage().isLoaded().getTitle(),
-				prop.getValue("Selenium_Title"),
-				"Check for the title of the page");
 		sassert.assertAll();
 	}
 	

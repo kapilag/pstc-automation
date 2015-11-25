@@ -14,6 +14,8 @@
 			<Page name="Google">
 				<url>https://www.google.com/</url>
 				<PageTimeOut>10</PageTimeOut>
+				<email>crestautomationteam@gmail.com</email>
+				<passwd>Crest1234</passwd>
 			</Page>
 			<Page name="Selenium">
 				<Title>Selenium - Web Browser Automation</Title>
@@ -21,7 +23,7 @@
 		</Pages>
 	</Data>
 
-	<Data environment="live">
+	<!-- <Data environment="live">
 		<Pages>
 			<Page name="Google">
 				<url>https://www.google.com/</url>
@@ -31,5 +33,5 @@
 				<Title>Selenium - Web Browser Automation</Title>
 			</Page>
 		</Pages>
-	</Data>
+	</Data> -->
 </Conf>

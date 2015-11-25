@@ -16,10 +16,10 @@
 <!ATTLIST MethodName runStrategy (Full|Optimal) #IMPLIED>]>
 
 <Mapping>
-	<Package name="tests" testData="TestData.xml"
+	<Package name="tests" 
 		runStrategy="Full">
 		<Class name="tests.SimpleGoogleTest" clientEnvironment="FireFoxSauce.xml">
-			<MethodName name = "tests.SimpleGoogleTest.verifySeleniumTitle_XML" clientEnvironment="FireFoxSauce.xml"></MethodName>
+			<MethodName name = "tests.SimpleGoogleTest.verifySeleniumTitle_XML" clientEnvironment="FireFoxSauce.xml" testData="TestData.xml"></MethodName>
 		</Class>
 		<!-- <Class name="com.sampleTest.test.datatest.GoogleTest" clientEnvironment="browsers/FireFoxLocal.xml;browsers/ChromeLocal.xml"></Class> -->
 	</Package>
